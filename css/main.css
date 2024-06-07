@@ -11,11 +11,32 @@ body {
     flex-direction: column;
 }
 
-/* Añadir margen superior al contenido */
 .content {
     flex: 1;
     padding: 20px;
-    margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+    margin-top: 56px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -60,6 +81,59 @@ footer a:hover {
 
 .redes:hover {
     color: #0073e6; /* Cambia el color cuando se pasa el mouse por encima */
+}
+
+.cart-toggle .btn-secondary {
+    background-color: #ffcc80; /* Color del botón */
+    color: #663300; /* Color del texto */
+}
+
+.notification {
+    background-color: #ffeecc; /* Color de fondo de la notificación */
+    color: #663300; /* Color del texto de la notificación */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Espacio entre la notificación y las imágenes */
+    position: absolute; /* Fija la posición de la notificación */
+    top: 0; /* Coloca la notificación en la parte superior */
+    left: 50%; /* Centra horizontalmente la notificación */
+    transform: translateX(-50%); /* Centra horizontalmente la notificación */
+    display: none; /* Oculta la notificación por defecto */
+}
+
+.products {
+    position: relative; /* Añade posición relativa al contenedor de productos */
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative; /* Añade posición relativa para que la notificación se muestre encima */
+    z-index: 1; /* Asegura que los productos estén por debajo de la notificación */
+}
+
+.cart-content {
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 55px; /* Ajustar según el tamaño de la barra de navegación */
+    right: 0;
+    z-index: 999; /* Asegurar que esté por encima de otros elementos */
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.cart-item button {
+    margin-left: 10px;
 }
 
 @media (max-width: 600px) {
